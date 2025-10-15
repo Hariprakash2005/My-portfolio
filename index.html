@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hariprakash K | Portfolio</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif;}
+    body {background:#f5f5f5; color:#222; scroll-behavior:smooth;}
+    a {text-decoration:none; color:inherit;}
+    h1,h2,h3 {color:#222;}
+    section {padding:60px 100px;}
+    img {max-width:100%; border-radius:10px;}
+    .container {display:flex;}
+
+    /* Sidebar */
+    .sidebar {
+      position:fixed; left:0; top:0; bottom:0;
+      width:230px; background:#f8b400; color:#fff;
+      display:flex; flex-direction:column; align-items:center;
+      padding:30px 0; box-shadow:2px 0 10px rgba(0,0,0,0.1);
+    }
+    .sidebar img {
+      width:110px; height:110px; border-radius:50%;
+      border:3px solid #fff; object-fit:cover;
+    }
+    .sidebar h2 {margin:15px 0; font-size:20px; text-align:center; color:#222;}
+    .sidebar nav a {
+      display:block; color:#222; font-weight:600;
+      padding:12px 25px; width:100%; text-align:center;
+      border-radius:10px; margin:5px 0; background:#fff; transition:0.3s;
+    }
+    .sidebar nav a:hover {background:#222; color:#fff;}
+
+    /* Main Content */
+    .main {margin-left:230px;}
+
+    /* Home */
+    #home {
+      background:#f5f4f5; display:flex; align-items:center;
+      justify-content:space-between; flex-wrap:wrap;
+    }
+    #home img {width:300px;}
+    #home .text {max-width:600px;}
+    #home h1 span {color:#f8b400;}
+    #home button {
+      padding:10px 25px; background:#f8b400; color:#fff;
+      border:none; border-radius:5px; cursor:pointer; margin-top:20px;
+    }
+    #home button:hover {background:#222;}
+
+    /* About */
+    #about {background:#f5f5f5;}
+    #about h2 {margin-bottom:20px;}
+    #about .about-container {display:flex; flex-wrap:wrap; gap:50px;}
+    #about .card {
+      background:#ebd19a; padding:20px; border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); flex:1; min-width:250px;
+    }
+    #about .facts {
+      display:flex; flex-wrap:wrap; gap:30px; margin-top:20px;
+    }
+    #about .fact {
+      background:#fff; padding:20px; border-radius:10px;
+      text-align:center; flex:1;
+    }
+    #about .fact h3 {color:#f8b400; font-size:28px;}
+
+    /* Resume */
+    #resume {background:#fff;}
+    #resume h2 {margin-bottom:20px;}
+    .resume-item {margin-bottom:20px;}
+    .resume-item h3 {color:#f8b400;}
+    ul {margin-top:10px; list-style:disc; margin-left:20px;}
+
+    /* Portfolio */
+    #portfolio {background:#f5f5f5;}
+    .portfolio-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+    .portfolio-item {
+      background:#fff; padding:15px; border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center;
+      transition:transform 0.3s;
+    }
+    .portfolio-item:hover {transform:scale(1.03);}
+
+    /* Contact */
+    #contact {background:#fff; text-align:center;}
+    #contact .icons {
+      display:flex; justify-content:center; gap:40px; flex-wrap:wrap;
+      margin-top:20px;
+    }
+    #contact .icon {display:flex; flex-direction:column; align-items:center;}
+    #contact .icon i {font-size:30px; color:#f8b400; margin-bottom:10px;}
+    footer {
+      background:#222; color:#fff; text-align:center; padding:15px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .sidebar {
+        position:relative; width:100%; flex-direction:row;
+        justify-content:space-around; height:auto;
+      }
+      .main {margin-left:0;}
+      section {padding:40px 20px;}
+      #home {flex-direction:column; text-align:center;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="C:\Users\PC\OneDrive\ドキュメント\portfolio\passport.jpg" alt="profile" />
+    <h2>Hariprakash K</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <!-- Home -->
+    <section id="home">
+      <div class="text">
+        <h1>Hi, I'm <span>Hariprakash K</span></h1>
+        <h3>B.Sc Computer Science Student | Cloud Enthusiast | Developer</h3>
+        <p>Motivated IT student with foundational experience in programming, databases, and system administration. Passionate about solving problems and developing innovative solutions.</p>
+        <button onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
+      </div>
+      <img src="C:\Users\PC\OneDrive\ドキュメント\portfolio\passport.jpg" alt="Hari">
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="card">
+          <h3>My Interests</h3>
+          <p>☁️ AWS Cloud <br>☕ Java Programming <br>🧠 Problem Solving <br>📚 Reading Books <br>🎧 Listening to Podcasts</p>
+        </div>
+        <div class="card">
+          <h3>Languages</h3>
+          <p>English – Professional Working Proficiency<br>Tamil – Full Professional Proficiency</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume">
+      <h2>Resume</h2>
+
+      <div class="resume-item">
+        <h3>Education</h3>
+        <p><strong>B.Sc Computer Science</strong> – Sri Krishna Arts and Science College, Coimbatore (2023–2026)</p>
+        <p><strong>School:</strong> C.R.R Matric Hr. Sec. School – Scored 80%</p>
+      </div>
+
+      <div class="resume-item">
+        <h3>Certificates</h3>
+        <ul>
+          <li>Cyber Security Foundation – Infosec (2024)</li>
+          <li>Administer Oracle Cloud Databases – Oracle (2025)</li>
+          <li>Database Management System – NPTEL (2025)</li>
+          <li>Developing Soft Skills – NPTEL (2024)</li>
+          <li>Cloud Masterclass (Practitioner Essentials) – Nasscom (2025)</li>
+          <li>Cyber Security Essentials – SKI-Tech (2025)</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>Skills</h3>
+        <p>Java | AWS Cloud | Database Management | Problem Solving</p>
+      </div>
+
+      <div class="resume-item">
+        <h3>Participation & Internship</h3>
+        <ul>
+          <li>Participated in “OSPHERE: Innovation in OS & Virtualization” workshop.</li>
+          <li>Won 3rd prize in technical quiz at KPR College.</li>
+          <li>Interned at Nandini Gears (1 month) – learned designing fundamentals using SolidWorks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <h2>Projects</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="C:\Users\PC\OneDrive\ドキュメント\portfolio\aws.jpeg" alt="AWS VPN" />
+          <h4>AWS Load Balancing & VPN Setup</h4>
+          <p>Designed a simple load balancing and VPN configuration in AWS environment.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="C:\Users\PC\OneDrive\ドキュメント\portfolio\bus.jpeg" alt="Bus App" />
+          <h4>Bus Routes and Timing Web Application</h4>
+          <p>Built a web app for bus scheduling and route management using web technologies.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="C:\Users\PC\OneDrive\ドキュメント\portfolio\solidworks.jpg" alt="MechDesign" />
+          <h4>MechDesign Pro (SolidWorks)</h4>
+          <p>Created 3D models and learned mechanical design principles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Let's connect for collaborations or opportunities.</p>
+      <div class="icons">
+        <div class="icon"><i>📧</i><p>hariprakashk18@gmail.com</p></div>
+        <div class="icon"><i>📞</i><p>9025938072</p></div>
+        <div class="icon"><i>💼</i><p><a href="https://www.linkedin.com/in/hariprakash-k-6313b8295" target="_blank">LinkedIn</a></p></div>
+        <div class="icon"><i>🐙</i><p><a href="https://github.com/Hariprakash2005" target="_blank">GitHub</a></p></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Hariprakash KK — All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for nav
+    document.querySelectorAll('.sidebar nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
